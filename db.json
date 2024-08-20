@@ -1,0 +1,32 @@
+{
+  "restaurants": [
+    {
+      "id": "1",
+      "name": "Mama's Kitchen",
+      "description": "American, 4.7 stars",
+      "raiting": 4,
+      "url": "/mamas-kitchen.png"
+    },
+    {
+      "id": "2",
+      "name": "The Burger Joint",
+      "description": "American, 4.6 stars",
+      "raiting": 4,
+      "url": "/burger-joint.png"
+    },
+    {
+      "id": "3",
+      "name": "Pasta Express",
+      "description": "American, 4.5 stars",
+      "raiting": 4,
+      "url": "/pasta-express.png"
+    },
+    {
+      "id": "4",
+      "name": "Taco Fiesta",
+      "description": "American, 4.8 stars",
+      "raiting": 4,
+      "url": "/taco-fiesta.png"
+    }
+  ]
+}

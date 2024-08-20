@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 96px;
+
+  height: 50px;
+
+  padding: 24px 0 48px;
+  color: var(--accent);
+
+  border-bottom: 3px solid var(--primary);
+  margin-bottom: 4px;
+}
+
+.footer__corporation {
+  align-self: flex-end;
+}

@@ -3,9 +3,13 @@ import './Footer.css';
 export const Footer = () => {
   return (
     <footer className="footer">
-      <p>Privacy Policy</p>
-      <p className="footer__corporation">2022 Eats</p>
-      <p>Terms Of Service</p>
+      <div className="container">
+        <div className="footer__wrapper">
+          <p>Privacy Policy</p>
+          <p>2022 Eats</p>
+          <p>Terms Of Service</p>
+        </div>
+      </div>
     </footer>
   );
 };

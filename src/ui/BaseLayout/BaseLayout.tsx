@@ -2,14 +2,14 @@ import './BaseLayout.css';
 
 import { Footer } from '../Footer/Footer';
 import { Header } from '../Header/Header';
+import { MainPage } from '../../pages/Main';
 
 export const BaseLayout = () => {
   return (
     <>
       <Header />
       <main>
-        <input placeholder="Search for restaurants" />
-        <section></section>
+        <MainPage />
       </main>
       <Footer />
     </>

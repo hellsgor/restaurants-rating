@@ -1,11 +1,13 @@
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 8px 16px;
+.header {
+  padding: 8px 0;
   margin-top: 4px;
 
   border-bottom: 1px solid var(--border-color);
   border-top: 3px solid var(--primary);
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -5,9 +5,13 @@ import { Profile } from '../Profile/Profile';
 
 export const Header = () => {
   return (
-    <header>
-      <Logo />
-      <Profile />
+    <header className="header">
+      <div className="container">
+        <div className="header__wrapper">
+          <Logo />
+          <Profile />
+        </div>
+      </div>
     </header>
   );
 };

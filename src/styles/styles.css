@@ -1,3 +1,5 @@
 @import './null.css';
+@import './vars.css';
 @import './base.css';
+@import './typography.css';
 @import './colors.css';

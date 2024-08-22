@@ -1,0 +1,32 @@
+.search__inner {
+  position: relative;
+}
+
+.search input {
+  width: 100%;
+  padding: 12px 16px 12px 52px;
+  background-color: var(--accent-light);
+  color: var(--accent);
+  border: none;
+  border-radius: var(--border-radius);
+  outline: none;
+  font-size: 1rem;
+}
+
+.search input::placeholder {
+  color: var(--accent-lighten);
+}
+
+.search__inner::before {
+  content: '';
+  pointer-events: none;
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  translate: 0 -50%;
+  background: url('../../assets/search.svg') no-repeat center;
+  background-size: 20px 20px;
+}

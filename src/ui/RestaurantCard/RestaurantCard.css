@@ -1,0 +1,42 @@
+.restaurant-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.restaurant-card__photo {
+  width: 100%;
+  flex: 0 0 160px;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  background-color: rgb(237, 237, 237);
+}
+
+.restaurant-card__photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.restaurant-card__photo_default img {
+  object-fit: contain;
+  opacity: .2;
+}
+
+.restaurant-card__text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-card__text-content p {
+  color: var(--accent-lighten);
+}
+
+.restaurant-card__text-content > p > span:first-child::after {
+  content: ', ';
+}
+
+.restaurant-card__text-content > p > span:last-child::after {
+  content: ' stars';
+}

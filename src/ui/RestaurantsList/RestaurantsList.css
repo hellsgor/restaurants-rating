@@ -1,0 +1,10 @@
+.restaurants-list__items {
+  display: flex;
+  column-gap: 16px;
+  row-gap: 24px;
+  flex-wrap: wrap;
+}
+
+.restaurants-list__item {
+  flex: 0 0 calc((100% - (16px * 3)) / 4);
+}

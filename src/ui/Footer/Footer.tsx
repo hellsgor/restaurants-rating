@@ -5,9 +5,9 @@ export const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="footer__wrapper">
-          <p>Privacy Policy</p>
-          <p>2022 Eats</p>
-          <p>Terms Of Service</p>
+          <p>&#169; {`${new Date().getFullYear()}`} Eats</p>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms Of Service</a>
         </div>
       </div>
     </footer>

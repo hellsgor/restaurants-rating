@@ -1,7 +1,7 @@
 .restaurants-list__items {
   display: flex;
   column-gap: 16px;
-  row-gap: 24px;
+  row-gap: 32px;
   flex-wrap: wrap;
 }
 

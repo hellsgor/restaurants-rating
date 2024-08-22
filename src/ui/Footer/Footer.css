@@ -2,11 +2,15 @@
   color: var(--accent);
   border-bottom: 3px solid var(--primary);
   margin-bottom: 4px;
+  border-top: 1px solid var(--border-color);
 }
 
 .footer__wrapper {
   padding: 24px 0;
   display: flex;
-  justify-content: center;
   gap: 96px;
+}
+
+.footer__wrapper > p {
+  margin-right: auto;
 }

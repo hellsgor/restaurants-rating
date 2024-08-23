@@ -1,0 +1,16 @@
+.error-message__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  margin-bottom: 32px;
+}
+
+.error-message__title {
+  font-size: 32px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.error-message__text {
+  color: var(--accent);
+}

@@ -1,30 +1,30 @@
+import {
+  Restaurant,
+  RestaurantSchema,
+  UpdateRestaurantRatingArgs,
+} from '../types/Restaurant';
 import { checkResponse } from './checkResponse';
 
 const API_URL = 'http://localhost:3000';
 
-export interface Restaurant {
-  id: string;
-  name: string;
-  type: string;
-  rating: number;
-  url: string;
+export function getRestaurants(): Promise<Restaurant[]> {
+  return fetch(`${API_URL}/restaurants`)
+    .then(checkResponse)
+    .then((response) => response.json())
+    .then((data) => RestaurantSchema.array().parse(data));
 }
 
-export const getRestaurants = (): Promise<Restaurant[]> =>
-  fetch(`${API_URL}/restaurants`)
-    .then((res) => checkResponse(res))
-    .then((res) => res.json());
-
-interface UpdateRestaurantRatingArgs {
-  id: Restaurant['id'];
-  rating: Restaurant['rating'];
-}
-
-export const updateRestaurantRating = ({
+export function updateRestaurantRating({
   id,
   rating,
-}: UpdateRestaurantRatingArgs): Promise<Restaurant> =>
-  fetch(`${API_URL}/restaurants/${id}`, {
+}: UpdateRestaurantRatingArgs): Promise<void> {
+  return fetch(`${API_URL}/restaurants/${id}`, {
     method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
     body: JSON.stringify({ rating }),
-  }).then((res) => res.json());
+  })
+    .then(checkResponse)
+    .then(() => undefined);
+}

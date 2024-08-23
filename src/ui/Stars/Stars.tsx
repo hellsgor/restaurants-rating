@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import './Stars.css';
-import { Star } from '../Star/Star';
+import { Star } from '../icons/Star/Star';
 
 type StarsProps = {
   rate: number;

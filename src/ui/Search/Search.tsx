@@ -1,10 +1,11 @@
-import React, { FC } from 'react';
 import './Search.css';
+
+import { FC, ChangeEvent } from 'react';
 
 type SearchProps = {
   value: string | undefined;
   placeholder?: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 };
 
 export const Search: FC<SearchProps> = ({

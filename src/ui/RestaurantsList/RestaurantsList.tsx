@@ -5,14 +5,19 @@ import { useContext } from 'react';
 import { RestaurantsContext } from '../../contexts/RestaurantsContext';
 
 export const RestaurantsList = () => {
-  const restaurants = useContext(RestaurantsContext).data;
+  const { data, search } = useContext(RestaurantsContext);
 
   return (
     <section className="restaurants-list">
       <div className="container">
         <ul className="restaurants-list__items">
-          {restaurants &&
-            restaurants.map((item) => (
+          {data &&
+            (search
+              ? data.filter((item) =>
+                  item.name.toLowerCase().includes(search.toLowerCase()),
+                )
+              : data
+            ).map((item) => (
               <li className="restaurants-list__item" key={item.id}>
                 <RestaurantCard
                   id={item.id}

@@ -1,6 +1,7 @@
-import { FC } from 'react';
+import { FC, useContext } from 'react';
 import './Rating.css';
 import { Star } from '../icons/Star/Star';
+import { RestaurantsContext } from '../../contexts/RestaurantsContext';
 
 type StarsProps = {
   rate: number;
@@ -8,6 +9,8 @@ type StarsProps = {
 };
 
 export const Rating: FC<StarsProps> = ({ rate, parentClasses = '' }) => {
+  const { onStarClick } = useContext(RestaurantsContext);
+
   return (
     <div className={`${parentClasses ? `${parentClasses} ` : ''}rating`}>
       <div className="rating__wrapper">
@@ -26,7 +29,12 @@ export const Rating: FC<StarsProps> = ({ rate, parentClasses = '' }) => {
 
         <div className="rating__stars rating__stars_desired">
           {[...Array(5)].map((_, i) => (
-            <div key={i} className="rating__item" data-rate={i + 1}>
+            <div
+              key={i}
+              className="rating__item"
+              data-rate={i + 1}
+              onClick={onStarClick}
+            >
               <Star />
             </div>
           ))}

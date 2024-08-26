@@ -27,10 +27,14 @@ export const MainPage = () => {
       />
       <RestaurantsContext.Provider
         value={{
-          data,
+          data:
+            Array.isArray(data) && data.length && search
+              ? data.filter((item) =>
+                  item.name.toLowerCase().includes(search.toLowerCase()),
+                )
+              : data,
           status,
           error,
-          search,
           onStarClick,
         }}
       >

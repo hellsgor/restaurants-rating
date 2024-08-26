@@ -3,26 +3,17 @@ import './RestaurantsList.css';
 import { RestaurantCard } from '../RestaurantCard/RestaurantCard';
 import { useContext } from 'react';
 import { RestaurantsContext } from '../../contexts/RestaurantsContext';
+import { calcRating } from '../../utils/calcRating';
 
 export const RestaurantsList = () => {
-  const { data, search } = useContext(RestaurantsContext);
-
-  const calcRating = (estimates: number[]): number =>
-    Math.round(
-      (estimates.reduce((acc, item) => acc + item, 0) / estimates.length) * 10,
-    ) / 10;
+  const { data } = useContext(RestaurantsContext);
 
   return (
     <section className="restaurants-list">
       <div className="container">
         <ul className="restaurants-list__items">
           {data &&
-            (search
-              ? data.filter((item) =>
-                  item.name.toLowerCase().includes(search.toLowerCase()),
-                )
-              : data
-            ).map((item) => (
+            data.map((item) => (
               <li className="restaurants-list__item" key={item.id}>
                 <RestaurantCard
                   id={item.id}

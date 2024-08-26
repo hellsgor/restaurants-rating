@@ -13,5 +13,5 @@ export type Restaurant = z.infer<typeof RestaurantSchema>;
 
 export interface UpdateRestaurantRatingArgs {
   id: Restaurant['id'];
-  rating: Restaurant['rating'];
+  estimates: Restaurant['estimates'];
 }

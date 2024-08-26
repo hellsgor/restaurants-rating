@@ -8,7 +8,9 @@ export const RestaurantsList = () => {
   const { data, search } = useContext(RestaurantsContext);
 
   const calcRating = (estimates: number[]): number =>
-    estimates.reduce((acc, item) => acc + item, 0) / estimates.length;
+    Math.round(
+      (estimates.reduce((acc, item) => acc + item, 0) / estimates.length) * 10,
+    ) / 10;
 
   return (
     <section className="restaurants-list">

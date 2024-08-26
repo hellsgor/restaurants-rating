@@ -3,14 +3,10 @@ import './RestaurantsList.css';
 import { RestaurantCard } from '../RestaurantCard/RestaurantCard';
 import { useContext } from 'react';
 import { RestaurantsContext } from '../../contexts/RestaurantsContext';
+import { calcRating } from '../../utils/calcRating';
 
 export const RestaurantsList = () => {
   const { data } = useContext(RestaurantsContext);
-
-  const calcRating = (estimates: number[]): number =>
-    Math.round(
-      (estimates.reduce((acc, item) => acc + item, 0) / estimates.length) * 10,
-    ) / 10;
 
   return (
     <section className="restaurants-list">

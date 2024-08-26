@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { RestaurantsContext } from '../../contexts/RestaurantsContext';
 
 export const RestaurantsList = () => {
-  const { data, search } = useContext(RestaurantsContext);
+  const { data } = useContext(RestaurantsContext);
 
   const calcRating = (estimates: number[]): number =>
     Math.round(
@@ -17,12 +17,7 @@ export const RestaurantsList = () => {
       <div className="container">
         <ul className="restaurants-list__items">
           {data &&
-            (search
-              ? data.filter((item) =>
-                  item.name.toLowerCase().includes(search.toLowerCase()),
-                )
-              : data
-            ).map((item) => (
+            data.map((item) => (
               <li className="restaurants-list__item" key={item.id}>
                 <RestaurantCard
                   id={item.id}

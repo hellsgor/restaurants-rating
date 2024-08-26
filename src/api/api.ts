@@ -16,14 +16,14 @@ export function getRestaurants(): Promise<Restaurant[]> {
 
 export function updateRestaurantRating({
   id,
-  rating,
+  estimates,
 }: UpdateRestaurantRatingArgs): Promise<void> {
   return fetch(`${API_URL}/restaurants/${id}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ rating }),
+    body: JSON.stringify({ estimates }),
   })
     .then(checkResponse)
     .then(() => undefined);

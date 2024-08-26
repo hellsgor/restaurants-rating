@@ -7,6 +7,11 @@ import { RestaurantsContext } from '../../contexts/RestaurantsContext';
 export const RestaurantsList = () => {
   const { data, search } = useContext(RestaurantsContext);
 
+  const calcRating = (estimates: number[]): number =>
+    Math.round(
+      (estimates.reduce((acc, item) => acc + item, 0) / estimates.length) * 10,
+    ) / 10;
+
   return (
     <section className="restaurants-list">
       <div className="container">
@@ -23,7 +28,11 @@ export const RestaurantsList = () => {
                   id={item.id}
                   name={item.name}
                   type={item.type}
-                  rating={item.rating}
+                  rating={
+                    item.estimates.length
+                      ? calcRating(item.estimates)
+                      : item.rating
+                  }
                   url={item.url}
                 />
               </li>

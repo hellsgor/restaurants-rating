@@ -5,28 +5,32 @@
       "name": "Mama's Kitchen",
       "type": "American",
       "rating": 4.7,
-      "url": "/mamas-kitchen.webp"
+      "url": "/mamas-kitchen.webp",
+      "estimates": []
     },
     {
       "id": "2",
       "name": "The Burger Joint",
       "type": "American",
       "rating": 4.6,
-      "url": "/burger-joint.webp"
+      "url": "/burger-joint.webp",
+      "estimates": []
     },
     {
       "id": "3",
       "name": "Pasta Express",
       "type": "American",
       "rating": 3.4,
-      "url": "/pasta-express.webp"
+      "url": "/pasta-express.webp",
+      "estimates": []
     },
     {
       "id": "4",
       "name": "Taco Fiesta",
       "type": "American",
       "rating": 3.8,
-      "url": "/taco-fiesta.webp"
+      "url": "/taco-fiesta.webp",
+      "estimates": []
     }
   ]
 }

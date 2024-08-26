@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Stars } from '../Stars/Stars';
+import { Rating } from '../Stars/Rating';
 import './RestaurantCard.css';
 
 interface RestaurantCard {
@@ -41,7 +41,9 @@ export const RestaurantCard: FC<RestaurantCard> = ({
         )}
       </div>
 
-      {rating && <Stars rate={rating} parentClasses="restaurant-card__stars" />}
+      {rating && (
+        <Rating rate={rating} parentClasses="restaurant-card__rating" />
+      )}
     </article>
   );
 };

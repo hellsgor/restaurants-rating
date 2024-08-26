@@ -18,7 +18,7 @@ export const RestaurantCard: FC<RestaurantCard> = ({
   url,
 }) => {
   return (
-    <article className="restaurant-card " data-restaurant-id={id}>
+    <article className="restaurant-card" data-restaurant-id={id}>
       <div
         className={`restaurant-card__photo${
           url ? '' : ' restaurant-card__photo_default'
